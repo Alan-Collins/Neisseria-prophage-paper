@@ -111,7 +111,7 @@ dist_dict = {}
 # score to be the same in both directions.
 for (qid, sid), pla in pla_dict.items():
     if (sid, qid) in pla_dict.keys():
-        if pla > pla_dict[(sid, qid)]:
+        if pla >= pla_dict[(sid, qid)]:
             dist_dict[(sid, qid)] = 1-pla
     else:
       dist_dict[(qid, sid)] = 1-pla
